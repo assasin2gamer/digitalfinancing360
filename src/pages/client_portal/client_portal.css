@@ -1,0 +1,178 @@
+/* --- Client Portal Styles --- */
+.client-portal {
+    background-color: #f4f7f9; /* A light, neutral background */
+    padding: 80px 40px;
+  }
+  
+  .portal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    padding: 40px;
+    transition: padding 0.3s ease;
+  }
+  
+  .portal-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 20px;
+  }
+  
+  .portal-header h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #343a40;
+    margin: 0;
+    transition: font-size 0.3s ease;
+  }
+  
+  .portal-header h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #6c757d;
+    margin: 10px 0 0;
+  }
+  
+  /* Summary Cards */
+  .summary-cards {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .summary-card {
+    flex: 1;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+  }
+  
+  .summary-card h5 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .summary-card .amount {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin: 0;
+    line-height: 1.2;
+    transition: font-size 0.3s ease;
+  }
+  
+  .summary-card.balance-card .amount {
+    color: #00767a; /* Using a theme color for emphasis */
+  }
+  
+  /* Payment History Table */
+  .payment-history h4 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .table-responsive {
+    overflow-x: auto; /* For smaller screens, allows horizontal scrolling */
+  }
+  
+  .payment-history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .payment-history-table th,
+  .payment-history-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    white-space: nowrap; /* Prevents text wrapping in cells */
+  }
+  
+  .payment-history-table thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+  }
+  
+  .payment-history-table tbody tr:hover {
+    background-color: #f1f3f5;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  
+  .status-processed {
+    background-color: #e6f7f4; /* Light green */
+    color: #008767; /* Dark green */
+  }
+  
+  /* Action Button */
+  .portal-action-btn {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00767a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .portal-action-btn:hover {
+    background-color: #005a5d;
+    transform: translateY(-2px);
+  }
+  
+  
+  /* --- Client Portal RESPONSIVE STYLES --- */
+  @media (max-width: 768px) {
+    .client-portal {
+      padding: 40px 20px; /* Reduce outer padding */
+    }
+  
+    .portal-container {
+      padding: 25px; /* Reduce inner padding */
+    }
+  
+    .portal-header h2 {
+      font-size: 2rem; /* Smaller main heading */
+    }
+  
+    .summary-cards {
+      flex-direction: column; /* Stack summary cards vertically */
+      gap: 20px;
+    }
+    
+    .summary-card .amount {
+      font-size: 1.8rem; /* Smaller amount text */
+    }
+  
+    .payment-history h4 {
+      font-size: 1.25rem;
+    }
+    
+    .payment-history-table th,
+    .payment-history-table td {
+      padding: 12px 10px; /* Make table cells more compact */
+    }
+  }
